@@ -14,7 +14,7 @@
 
 #### preview
 
-* ✅[Cherry-Bloossm](https://sunilswain.github.io/Linktree-rin/)
+* ✅[rin](https://sunilswain.github.io/Linktree-rin/)
 
 
 
