@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+:root {
+    --font:'Cinzel', serif;
+    --font-2: 'Pattaya', sans-serif;
+    --bgColor: #000000;
+    --accentColor: #910404;
+    --largeDeviceBg: url("https://images.unsplash.com/photo-1598063183638-4ffe7c5f0f8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+    --smallDeviceBg: url("https://wallpaperaccess.com/full/4389461.jpg");
+    --grad:linear-gradient(rgb(10, 10, 10), rgb(53, 41, 46), rgb(162, 118, 131), rgb(205, 155, 164), rgb(250, 195, 197));
+}
+.links {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin:30px auto;
+}
+body {
+    color: var(--bgColor);
+    background-image: var(--smallDeviceBg);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.container{
+    margin: auto;
+    padding: 15px;
+    display: block;
+}
+.userName {
+    padding: 15px;
+    display: grid;
+    text-decoration: none;
+    color: var(--accentColor);
+    margin: auto;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight:bold;
+}
+.bio {
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    color: var(--bgColor);
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: 20px;
+}
+.userPhoto {
+    margin: auto;
+    width: 110px;
+    height:110px;
+    display: grid;
+    border-radius: 50%; 
+    margin: auto;
+    
+}
+@media only screen and (min-width:600px) {
+    :root {
+        --font:'Cinzel', serif;
+        --bgColor: #000000;
+        --accentColor: #e0481a;
+        --largeDeviceBg: url("https://images.unsplash.com/photo-1598063183638-4ffe7c5f0f8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+        --smallDeviceBg: url("https://wallpaperaccess.com/full/4389461.jpg");
+        --grad:linear-gradient(rgb(10, 10, 10), rgb(53, 41, 46), rgb(162, 118, 131), rgb(205, 155, 164), rgb(250, 195, 197));
+    }
+    body {
+        background-image: url("https://cdnb.artstation.com/p/assets/images/images/000/305/837/large/mugen_by_erenarik-d80ge69.jpg?1416230782");
+        background-size: cover;
+        box-sizing: border-box;
+        box-sizing: 100%;
+    } 
+    .links {
+        max-width: 675px;
+        width: auto;
+        display: block;
+        margin:30px auto;
+    }
+    .userName {
+        display: grid;
+        text-decoration: none;
+        color: var(--bgColor);
+        margin: auto;
+        text-align: center;
+        font-family: var(--font);
+        font-size: 20px;
+    }
+}
+.link {
+    display: grid;
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight:normal;
+    font-family: var(--font);
+    margin: auto;
+    color: var(--bgColor);
+    background-color: var(--accentColor);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 15px;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    border: solid var(--grad) 20px;
+
+}
+/* .link > img{
+    font-size: 25px;
+} */
+.link:hover {
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+    font-weight:bolder;
+    
+}
+.userName,
+.bio:hover {
+    font-size: 25px;
+}
+

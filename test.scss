@@ -1,0 +1,208 @@
+$color-bg: #111;
+$color-particle: rgb(0, 0, 0);
+$spacing_small:860px;
+$spacing_large: 2560px;
+
+$breakpoint:600px;
+
+@media only screen and (max-width:$breakpoint){
+    $time-1-small: 20s;
+    $time-2-small: 40s;
+    $time-3-small: 60s;
+    $time-4-small: 200;
+
+    @function particles($max) {
+        $val: 0px 0px $color-particle;
+        @for $i from 1 through $max {
+            $val: #{$val},
+            random($spacing_small)+px random($spacing_small)+px $color-particle;
+        }
+        @return $val;
+    }
+    @keyframes animParticle {
+        from { transform: translateY(0px); }
+        to   { transform: translateY($spacing_small * -1); }
+    }
+    
+    @mixin particles($max) {
+       box-shadow: particles($max);
+    }
+    
+    /* Styles */
+    
+    .animation-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .particle,
+    .particle:after {
+      background: transparent;
+    }
+    
+    .particle:after {
+      position: absolute;
+      content: "";
+      top: $spacing_small;
+    }
+    
+    .particle-1 {
+      animation: animParticle $time-1-small linear infinite;
+      @include particles(200);
+      height: 1px;
+      width: 1px;
+    }
+    
+    .particle-1:after {
+      @include particles(200);
+      height: 1px;
+      width: 1px;
+    }
+    
+    .particle-2 {
+      animation: animParticle $time-2-small linear infinite;
+      @include particles(70);
+      height: 2px;
+      width: 2px;
+    }
+    
+    .particle-2:after {
+      @include particles(70);
+      height: 2px;
+      width: 2px;
+    }
+    
+    .particle-3 {
+      animation: animParticle $time-3-small linear infinite;
+      @include particles(40);
+      height: 3px;
+      width: 3px;
+    }
+    
+    .particle-3:after {
+      @include particles(40);
+      height: 3px;
+      width: 3px;
+    }
+
+    .particle-4 {
+        animation: animParticle $time-4-small linear infinite;
+        @include particles(130);
+        height: 1px;
+        width: 1px;
+    }
+      
+    .particle-4:after {
+        @include particles(130);
+        height: 1px;
+        width: 1px;
+    }
+    
+    .page-wrapper {
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+    }
+}
+@media only screen and (min-width:$breakpoint){
+    $time-1-large: 60s;
+    $time-2-large: 120s;
+    $time-3-large: 180s;
+    $time-4-large: 600s;
+    @function particles($max) {
+        $val: 0px 0px $color-particle;
+        @for $i from 1 through $max {
+           $val: #{$val},
+           random($spacing_large)+px random($spacing_large)+px $color-particle;
+        }
+        @return $val;
+    }
+    @keyframes animParticle {
+        from { transform: translateY(0px); }
+        to   { transform: translateY($spacing_large * -1); }
+    }
+    @mixin particles($max) {
+        box-shadow: particles($max);
+     }
+     
+     /* Styles */
+     
+     .animation-wrapper {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+     }
+     
+     .particle,
+     .particle:after {
+       background: transparent;
+     }
+     
+     .particle:after {
+       position: absolute;
+       content: "";
+       top: $spacing_large;
+     }
+     
+     .particle-1 {
+       animation: animParticle $time-1-large linear infinite;
+       @include particles(600);
+       height: 1px;
+       width: 1px;
+     }
+     
+     .particle-1:after {
+       @include particles(600);
+       height: 1px;
+       width: 1px;
+     }
+     
+     .particle-2 {
+       animation: animParticle $time-2-large linear infinite;
+       @include particles(200);
+       height: 2px;
+       width: 2px;
+     }
+     
+     .particle-2:after {
+       @include particles(200);
+       height: 2px;
+       width: 2px;
+     }
+     
+     .particle-3 {
+       animation: animParticle $time-3-large  linear infinite;
+       @include particles(100);
+       height: 3px;
+       width: 3px;
+     }
+     
+     .particle-3:after {
+       @include particles(100);
+       height: 3px;
+       width: 3px;
+     }
+     
+     .particle-4 {
+       animation: animParticle $time-4-large linear infinite;
+       @include particles(400);
+       height: 1px;
+       width: 1px;
+     }
+     
+     .particle-4:after {
+       @include particles(400);
+       height: 1px;
+       width: 1px;
+     }
+     .page-wrapper {
+         text-align: center;
+         color: #fff;
+         z-index: 2;
+     }
+}
